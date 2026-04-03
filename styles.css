@@ -1,0 +1,183 @@
+/*Main Styles*/
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(0, 153, 137);
+    /* background: linear-gradient(180deg, black, rgb(47, 1, 60)); */
+    /* font-family: 'Astrospace'; */
+    color: rgb(0, 0, 0);
+}
+
+/*Centering main container and pushing footer down*/
+
+.container {
+    margin: auto;
+    min-height: 100vh;
+    flex: 1;
+}
+
+/* below are the defaults for each page title and navigation styles and functionality*/
+.maintitle {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    /*color: rgb(251, 135, 222); */
+    font-size: clamp(8px, 2vw, 2vw);
+}
+
+.maintitle > h1 {
+    font-family: 'MS Sans Serif', Tahoma, sans-serif;
+    color: rgb(0, 0, 0);
+    margin-bottom: 1rem;
+}
+
+.maintitle > p {
+    font-family: 'MS Sans Serif', Tahoma, sans-serif;
+    color: rgb(0, 0, 0);
+}
+
+.blurb {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    font-size: clamp(7px, 1.5vw, 1.5vw);
+    font-family: 'MS Sans Serif', Tahoma, sans-serif;
+}
+
+nav {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin: auto;
+
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+
+    background-color: #c0c0c0;
+    background-size: cover;
+    background-position: center;
+    height: 20px;
+    border-bottom: 2px solid #808080;
+    border-top: 2px solid #ffffff;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline;
+}
+
+nav li a {
+    font-size: clamp(7px, 2vw, 20px);
+    border-top: 2px solid #ffffff;
+    border-left: 2px solid #ffffff;
+    border-right: 2px solid #808080;
+    border-bottom: 2px solid #808080;
+    padding: 10px 60px;
+    font-family: 'MS Sans Serif', Tahoma, sans-serif;
+    color: black;
+    cursor: pointer;
+    box-shadow:
+        inset 1px 1px 0 #dfdfdf,
+        inset -1px -1px 0 #404040;
+}
+
+nav li a:hover {
+    cursor: pointer;
+    background-color: #868583;
+}
+
+.btnactive {
+    color: black;
+    background-color: #868583;
+}
+
+/* Main container + content styles */
+.projectcategory {
+    display: flex;
+    margin: auto;
+    justify-content: left;
+    align-items: center;
+    font-size: clamp(10px, 2vw, 2vw);
+    padding: 1rem;
+    color: #c0c0c0;
+    background-color: rgb(1, 1, 159);
+    background-size: cover;
+    background-position: center;
+    height: 15px;
+    border-bottom: 2px solid #808080;
+    border-top: 2px solid #ffffff;
+}
+
+.content {
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /* ^ adjusts the amount of columns depending on the screen size + their min/max width that they take up.
+    Below is the gap between each, and stretching forces them all to be the same length which looks neat.*/
+    gap: 12px;
+    align-items: stretch;
+
+    width: 90%;
+    height: 70%;
+    padding: 10px;
+}
+
+/*styles for the actual boxes, and the styles for all the elements within them.*/
+.content .projectset {
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    margin: 0 auto;
+
+    border-top: 2px solid #ffffff;
+    border-left: 2px solid #ffffff;
+    border-right: 2px solid #808080;
+    border-bottom: 2px solid #808080;
+
+    font-family: 'MS Sans Serif', Tahoma, sans-serif;
+    color: black;
+    background-color: #c0c0c0;
+    cursor: pointer;
+    box-shadow:
+        inset 1px 1px 0 #dfdfdf,
+        inset -1px -1px 0 #404040;
+}
+
+.projectset:hover {
+    cursor: pointer;
+    background-color: #868583;
+}
+
+.projectset > p {
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* footer styles with the same gradient as in nav, alignment, and text styles */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+
+    background-image:
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)),
+        url(./pics/bannernav.webp);
+
+    height: 50px;
+}
+
+footer > p {
+    text-align: center;
+}
