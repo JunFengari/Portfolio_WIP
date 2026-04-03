@@ -87,6 +87,10 @@ nav li a {
     box-shadow:
         inset 1px 1px 0 #dfdfdf,
         inset -1px -1px 0 #404040;
+
+    transition:
+        transform 0.35s ease,
+        background-color 0.35s ease;
 }
 
 nav li a:hover {
@@ -125,7 +129,7 @@ nav li a:hover {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     /* ^ adjusts the amount of columns depending on the screen size + their min/max width that they take up.
     Below is the gap between each, and stretching forces them all to be the same length which looks neat.*/
-    gap: 12px;
+    gap: 30px;
     align-items: stretch;
 
     width: 90%;
@@ -152,11 +156,15 @@ nav li a:hover {
     box-shadow:
         inset 1px 1px 0 #dfdfdf,
         inset -1px -1px 0 #404040;
+    transition:
+        transform 0.35s ease,
+        background-color 0.35s ease;
 }
 
 .projectset:hover {
     cursor: pointer;
     background-color: #868583;
+    transform: translateY(-4px);
 }
 
 .projectset > p {
