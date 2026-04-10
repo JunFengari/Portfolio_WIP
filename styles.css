@@ -172,6 +172,18 @@ nav li a:hover {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+.projectset > h3 {
+    color: black;
+    font-family: 'MS Sans Serif', Tahoma, sans-serif;
+    margin-top: 0.5rem;
+}
+
+.projectset > img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 0.5rem;
+}
+
 /* footer styles with the same gradient as in nav, alignment, and text styles */
 footer {
     display: flex;
