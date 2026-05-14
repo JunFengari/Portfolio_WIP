@@ -40,7 +40,8 @@ body {
 
 .blurb {
     display: flex;
-    margin: auto;
+    margin-left: 1em;
+    margin-right: 1em;
     justify-content: center;
     align-items: center;
     font-size: clamp(7px, 1.5vw, 1.5vw);
@@ -106,6 +107,8 @@ nav li a:hover {
     color: black;
     background-color: #868583;
 }
+
+/* -----------------------------------------------PROJECT CONTENT-------------------------------------------- */
 
 /* Main container + content styles */
 .projectcategory {
@@ -173,7 +176,7 @@ nav li a:hover {
 
 .projectset > p {
     color: black;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'MS Sans Serif', Tahoma, sans-serif;
 }
 
 .projectset > h3 {
@@ -188,7 +191,7 @@ nav li a:hover {
     margin-bottom: 0.5rem;
 }
 
-/*---------------------------------------INDIVIDUAL PROJECT STYLES-------------------------------------*/
+/*---------------------------------------INDIVIDUAL PROJECT PAGE STYLES-------------------------------------*/
 
 .projcontainer {
     padding: 0 80px;
@@ -218,35 +221,63 @@ nav li a:hover {
 
 .project-right {
     flex: 2;
+    margin-right: 1rem;
 }
 
-.project-hero img {
-    width: 80%;
+.project-right > p > img {
+    width: 100%;
     border-radius: 10px;
-    margin: 1rem;
-}
-
-.project-links {
-    display: flex;
-    gap: 0.5rem;
     margin-top: 1rem;
 }
 
+.project-right > p,
+ul {
+    margin-top: 1rem;
+    font-family: 'MS Sans Serif', Tahoma, sans-serif;
+}
+
+.project-hero img {
+    width: 85%;
+    border-radius: 10px;
+    margin-top: 1rem;
+    margin-left: 1rem;
+}
+
+.project-overview > p {
+    display: flex;
+    flex-direction: column;
+    font-family: 'MS Sans Serif', Tahoma, sans-serif;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+}
+
+.project-links {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    width: 80%;
+}
+
 .project-links > a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: clamp(7px, 2vw, 20px);
     border-top: 2px solid #ffffff;
     border-left: 2px solid #ffffff;
     border-right: 2px solid #808080;
     border-bottom: 2px solid #808080;
-    padding: 10px 60px;
+    padding: 10px 15px;
     font-family: 'MS Sans Serif', Tahoma, sans-serif;
     color: black;
+    text-decoration: none;
     cursor: pointer;
     background-color: #c0c0c0;
     box-shadow:
         inset 1px 1px 0 #dfdfdf,
         inset -1px -1px 0 #404040;
-
     transition:
         transform 0.35s ease,
         background-color 0.35s ease;
@@ -257,16 +288,50 @@ nav li a:hover {
     background-color: #868583;
 }
 
+.project-title {
+    display: flex;
+    margin: auto;
+    margin-top: 1rem;
+    justify-content: left;
+    align-items: center;
+    font-size: clamp(10px, 2vw, 2vw);
+    padding: 1rem;
+    color: #c0c0c0;
+    background-color: rgb(1, 1, 159);
+    background-size: cover;
+    background-position: center;
+    height: 15px;
+    border-bottom: 2px solid #808080;
+    border-top: 2px solid #ffffff;
+}
+
+.project-gallery-title {
+    display: flex;
+    margin: auto;
+    margin-top: 1rem;
+    justify-content: left;
+    align-items: center;
+    padding: 1rem;
+    color: #c0c0c0;
+    background-color: rgb(1, 1, 159);
+    background-size: cover;
+    background-position: center;
+    height: 10px;
+    border-bottom: 2px solid #808080;
+    border-top: 2px solid #ffffff;
+}
+
 .project-gallery {
     margin-top: 1.5rem;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1.5rem;
+    margin-bottom: 2rem;
 }
 
 .project-gallery img {
     width: 100%;
-    max-width: 900px;
+    max-width: 400px;
     height: auto;
     border-radius: 5px;
 }
