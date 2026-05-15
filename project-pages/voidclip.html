@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" type="text/css" href="../styles.css" />
+        <title>Jun's Portfolio</title>
+    </head>
+
+    <body>
+        <div class="navigationdiv">
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a>page</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="project-nav-arrows">
+            <a href="project-prev.html" class="arrow left">←</a>
+            <a href="project-next.html" class="arrow right">→</a>
+        </div>
+
+        <div class="projcontainer">
+            <div class="project-layout">
+                <!-- LEFT SIDE -->
+                <div class="project-left">
+                    <div class="project-hero">
+                        <img
+                            src="/images/voidclip-logo.png"
+                            alt="Project image for VoidClip"
+                        />
+                    </div>
+                    <div class="project-overview">
+                        <p>Date: April, May 2026</p>
+                        <p>Role: App Developer</p>
+                        <p>
+                            Contributors: Jun Fengari, Nasha
+                            Wanichwecharungruang
+                        </p>
+                    </div>
+                    <div class="project-links">
+                        <a
+                            href="https://github.com/JunFengari/VoidClip"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            GitHub
+                        </a>
+                        <a
+                            href="http://youtube.com/placeholder"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="btn"
+                        >
+                            Youtube
+                        </a>
+                        <a href="#" target="_blank" rel="noopener noreferrer">
+                            Demo
+                        </a>
+
+                        <a href="#" target="_blank" rel="noopener noreferrer">
+                            Button
+                        </a>
+                    </div>
+                </div>
+
+                <!-- RIGHT SIDE -->
+                <div class="project-right">
+                    <h1 class="project-title">VoidClip</h1>
+                    <h3 class="project-subtitle">About</h3>
+                    <p class="project-description">
+                        SoitinStock is a web-based inventory and rental
+                        management system designed for a musical instrument
+                        rental shop. It enables employees to track instrument
+                        availability, manage customer rentals, and monitor
+                        inventory in real time through a centralized interface.
+                        <br />
+                        The system is primarily intended for use within a
+                        physical store environment, where employees need quick
+                        and reliable access to inventory and rental information.
+                        However, for demonstration and accessibility purposes,
+                        the application is deployed online using Amazon Web
+                        Services (AWS), allowing it to be accessed through a web
+                        browser.<br />
+                        <br />
+                        My role in this project involved designing and
+                        implementing the AWS infrastructure. Below is an
+                        architecture diagram showcasing the various AWS services
+                        utilized in the project, including EC2 for hosting the
+                        application, RDS for database management, and S3 for
+                        storing the static frontend.
+                        <br />
+                        <img
+                            src="/project-screenshots/Arch-Diagram.drawioSoitinstock.png"
+                            alt="soitinstock architecture diagram"
+                        />
+                    </p>
+                    <h3 class="project-subtitle">Technical Overview</h3>
+                    <p class="project-description">
+                        The project frontend is built using Angular and the
+                        backend is powered by a Node.js and Express REST API.
+                        Data is stored in a relational MySQL database hosted on
+                        Amazon RDS. Authentication is handled through AWS
+                        Cognito, providing secure user access via JWT-based
+                        authentication.
+                        <br />
+                        This project was limited to the AWS free tier with a
+                        budget of 200 euros, which means the archictecture in
+                        it's current state is not optimized for production use.
+                        However, the AWS deployment was built as IaC
+                        (Infrastructe as Code) and can be further developed into
+                        a more robust and scalable solution.
+                        <br />
+                        The project is divided into the following CloudFormation
+                        stacks:
+                        <br />
+                        <img
+                            src="/project-screenshots/SSStacks.png"
+                            alt="soitinstock architecture diagram"
+                        />
+                    </p>
+                    <ul>
+                        <li>
+                            S3 (Simple Storage Service): Hosts the Angular
+                            frontend as a static website
+                        </li>
+                        <li>
+                            CloudFront: Acts as a CDN and entry point for the
+                            application
+                        </li>
+                        <li>
+                            Elastic Beanstalk: Deploys and manages the Node.js
+                            Express backend on an EC2 instance
+                        </li>
+                        <li>
+                            EC2: Underlying compute instance running the backend
+                            server
+                        </li>
+                        <li>
+                            RDS (MySQL): Relational database for storing
+                            application data
+                        </li>
+                        <li>
+                            Cognito: Handles user authentication and
+                            authorization using JWT tokens
+                        </li>
+                        <li>
+                            IAM: Manages permissions and access control between
+                            AWS services
+                        </li>
+                        <li>
+                            CloudFormation: Defines and provisions
+                            infrastructure as code
+                        </li>
+                    </ul>
+
+                    <h3 class="project-subtitle">Interface</h3>
+                    <p class="project-description">
+                        The user interface is designed to be intuitive and
+                        user-friendly, allowing employees to easily navigate
+                        through the system.
+                        <img
+                            src="/project-screenshots/SSmainpage.png"
+                            alt="soitinstock user interface screenshot"
+                        />
+                    </p>
+
+                    <h3 class="project-gallery-title">Project Gallery</h3>
+                    <div class="project-gallery">
+                        <img
+                            src="/project-screenshots/SShellouser.png"
+                            alt="soitinstock user screenshot"
+                        />
+                        <img
+                            src="/project-screenshots/SScognitoscreenshot.png"
+                            alt="soitinstock login screenshot"
+                        />
+                        <img
+                            src="/project-screenshots/SS-phonerentiems.png"
+                            alt="soitinstock phone rental screenshot"
+                        />
+                        <img
+                            src="/project-screenshots/SSfigmat.png"
+                            alt="soitinstock figma screenshot"
+                        />
+                        <img
+                            src="/project-screenshots/SStietokanta.png"
+                            alt="soitinstock database screenshot"
+                        />
+                        <img
+                            src="/project-screenshots/SSvärimaalima.png"
+                            alt="soitinstock colors screenshot"
+                        />
+                        <img
+                            src="/images/placeholder.png"
+                            alt="placeholder image"
+                        />
+                        <img
+                            src="/images/placeholder.png"
+                            alt="placeholder image"
+                        />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>Portfolio website and art by Jun Fengari</p>
+        </footer>
+    </body>
+</html>
