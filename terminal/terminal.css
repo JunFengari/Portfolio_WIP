@@ -1,0 +1,168 @@
+/*------------------------------------------------- Main Styles -------------------------------------------------------*/
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(0, 153, 137);
+    /* background: linear-gradient(180deg, black, rgb(47, 1, 60)); */
+    /* font-family: 'Astrospace'; */
+    color: rgb(0, 0, 0);
+}
+
+/*Centering main container and pushing footer down*/
+
+.container {
+    margin: auto;
+    min-height: 100vh;
+    flex: 1;
+}
+
+/*----------------------------------------------------- NAVIGATION ----------------------------------------------------*/
+
+nav {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin: auto;
+
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+
+    background-color: #c0c0c0;
+    background-size: cover;
+    background-position: center;
+    border-bottom: 2px solid #808080;
+    border-top: 2px solid #ffffff;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline;
+}
+
+nav li a {
+    font-size: clamp(7px, 2vw, 20px);
+    border-top: 2px solid #ffffff;
+    border-left: 2px solid #ffffff;
+    border-right: 2px solid #808080;
+    border-bottom: 2px solid #808080;
+    padding: 10px 60px;
+    font-family: 'MS Sans Serif', Tahoma, sans-serif;
+    color: black;
+    cursor: pointer;
+    box-shadow:
+        inset 1px 1px 0 #dfdfdf,
+        inset -1px -1px 0 #404040;
+
+    transition:
+        transform 0.35s ease,
+        background-color 0.35s ease;
+}
+
+nav li a:hover {
+    cursor: pointer;
+    background-color: #868583;
+}
+
+.btnactive {
+    color: black;
+    background-color: #868583;
+}
+
+/* -------------------------------------------------- CONTENT -------------------------------------------------------*/
+
+* {
+    box-sizing: border-box;
+}
+
+/*----------------------------------------------------- DESKTOP ----------------------------------------------------*/
+
+.desktop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: calc(100vh - 50px);
+}
+
+/*-------------------------------------------------- TERMINAL WINDOW ------------------------------------------------*/
+
+.terminal-window {
+    width: 100%;
+    max-width: 1300px;
+    height: 80vh;
+
+    background-color: #c0c0c0;
+
+    border-top: 2px solid #ffffff;
+    border-left: 2px solid #ffffff;
+    border-right: 2px solid #404040;
+    border-bottom: 2px solid #404040;
+
+    box-shadow:
+        inset 1px 1px 0 #dfdfdf,
+        inset -1px -1px 0 #808080;
+}
+
+/*----------------------------------------------------- TITLE BAR ---------------------------------------------------*/
+
+.title-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: linear-gradient(90deg, rgb(1, 1, 159), rgb(0, 70, 180));
+
+    color: #c0c0c0;
+
+    padding: 4px 8px;
+
+    font-family: 'MS Sans Serif', Tahoma, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/*--------------------------------------------------- WINDOW BUTTONS ------------------------------------------------*/
+
+.window-buttons {
+    display: flex;
+    gap: 4px;
+}
+
+.window-buttons button {
+    width: 22px;
+    height: 22px;
+
+    background-color: #c0c0c0;
+
+    border-top: 2px solid #ffffff;
+    border-left: 2px solid #ffffff;
+    border-right: 2px solid #404040;
+    border-bottom: 2px solid #404040;
+
+    font-size: 12px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+/*-------------------------------------------------- TERMINAL CONTENT ----------------------------------------------*/
+
+.terminal-content {
+    height: calc(100% - 32px);
+
+    background-color: black;
+    color: #00ff99;
+
+    padding: 1rem;
+
+    font-family: 'Courier New', monospace;
+    font-size: 1rem;
+
+    overflow-y: auto;
+}
