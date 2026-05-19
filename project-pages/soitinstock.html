@@ -18,8 +18,8 @@
         </div>
 
         <div class="project-nav-arrows">
-            <a href="project-prev.html" class="arrow left">←</a>
-            <a href="project-next.html" class="arrow right">→</a>
+            <!-- <a href="project-prev.html" class="arrow left">←</a> -->
+            <a href="serverless.html" class="arrow right">→</a>
         </div>
 
         <div class="projcontainer">
@@ -32,22 +32,28 @@
                             alt="Project image for SoitinStock"
                         />
                     </div>
+
                     <div class="project-overview">
                         <p><b>Date:</b> April, May 2026</p>
+
                         <p>
                             <b>Role:</b> AWS Cloud Engineer, DevOps Specialist
                         </p>
+
                         <p>
                             <b>Contributors:</b> Jun Fengari, Thomas
                             Vainikainen, <br />
                             Minttu Räisänen, Oskari Puranen
                         </p>
+
                         <p><b>Course:</b> Ohjelmistoprojekti 2</p>
+
                         <p>
                             <b>Institution:</b> Jyväskylä University of Applied
                             Sciences
                         </p>
                     </div>
+
                     <div class="project-links">
                         <a
                             href="https://github.com/jamktiko/Soitinstock"
@@ -56,6 +62,7 @@
                         >
                             GitHub
                         </a>
+
                         <a
                             href="https://youtu.be/eF0VvbSEIqM"
                             target="_blank"
@@ -63,6 +70,7 @@
                         >
                             Demo
                         </a>
+
                         <a
                             href="http://youtube.com/placeholder"
                             target="_blank"
@@ -71,44 +79,49 @@
                         >
                             Skit
                         </a>
-                        <!-- <a href="#" target="_blank" rel="noopener noreferrer">
-                            Button
-                        </a> -->
                     </div>
                 </div>
 
                 <!-- RIGHT SIDE -->
                 <div class="project-right">
                     <h1 class="project-title">SoitinStock</h1>
+
                     <h3 class="project-subtitle">About</h3>
+
                     <p class="project-description">
                         SoitinStock is a web-based inventory and rental
                         management system designed for a musical instrument
                         rental shop. It enables employees to track instrument
                         availability, manage customer rentals, and monitor
                         inventory in real time through a centralized interface.
+
                         <br />
+                        <br />
+
                         The system is primarily intended for use within a
                         physical store environment, where employees need quick
                         and reliable access to inventory and rental information.
                         However, for demonstration and accessibility purposes,
                         the application is deployed online using Amazon Web
                         Services (AWS), allowing it to be accessed through a web
-                        browser.<br />
+                        browser.
+
                         <br />
+                        <br />
+
                         My role in this project involved designing and
-                        implementing the AWS infrastructure. Below is an
-                        architecture diagram showcasing the various AWS services
-                        utilized in the project, including EC2 for hosting the
-                        application, RDS for database management, and S3 for
-                        storing the static frontend.
-                        <br />
+                        implementing the AWS infrastructure. Here's the
+                        infrastructure architecture diagram for the project:
+
                         <img
-                            src="/project-screenshots/Arch-Diagram.drawioSoitinstock.png"
+                            src="/project-screenshots/soitinstock/Arch-Diagram.drawioSoitinstock.png"
                             alt="soitinstock architecture diagram"
+                            class="large-image"
                         />
                     </p>
+
                     <h3 class="project-subtitle">Technical Overview</h3>
+
                     <p class="project-description">
                         The project frontend is built using Angular and the
                         backend is powered by a Node.js and Express REST API.
@@ -116,51 +129,60 @@
                         Amazon RDS. Authentication is handled through AWS
                         Cognito, providing secure user access via JWT-based
                         authentication.
+
                         <br />
+                        <br />
+
                         This project was limited to the AWS free tier with a
-                        budget of 200 euros, which means the archictecture in
-                        it's current state is not optimized for production use.
-                        However, the AWS deployment was built as IaC
-                        (Infrastructe as Code) and can be further developed into
-                        a more robust and scalable solution.
-                        <br />
-                        The project is divided into the following CloudFormation
-                        stacks:
-                        <br />
+                        budget of 200 euros, which means the architecture in its
+                        current state is not optimized for production use.
+                        However, the AWS deployment was built as Infrastructure
+                        as Code (IaC) and can be further developed into a more
+                        robust and scalable solution.
+
                         <img
-                            src="/project-screenshots/SSStacks.png"
-                            alt="soitinstock architecture diagram"
+                            src="/project-screenshots/soitinstock/SSStacks.png"
+                            alt="soitinstock stack diagram"
+                            class="large-image"
                         />
                     </p>
+
                     <ul>
                         <li>
                             S3 (Simple Storage Service): Hosts the Angular
                             frontend as a static website
                         </li>
+
                         <li>
                             CloudFront: Acts as a CDN and entry point for the
                             application
                         </li>
+
                         <li>
                             Elastic Beanstalk: Deploys and manages the Node.js
                             Express backend on an EC2 instance
                         </li>
+
                         <li>
                             EC2: Underlying compute instance running the backend
                             server
                         </li>
+
                         <li>
                             RDS (MySQL): Relational database for storing
                             application data
                         </li>
+
                         <li>
                             Cognito: Handles user authentication and
                             authorization using JWT tokens
                         </li>
+
                         <li>
                             IAM: Manages permissions and access control between
                             AWS services
                         </li>
+
                         <li>
                             CloudFormation: Defines and provisions
                             infrastructure as code
@@ -168,60 +190,100 @@
                     </ul>
 
                     <h3 class="project-subtitle">Further Documentation</h3>
+
                     <p class="project-description">
                         Further detailed documentation on my contribution to the
                         project can be found in the GitHub repository under
                         <a
                             href="https://github.com/jamktiko/SoitinStock/blob/main/CF-templates/Arch-docs.md"
-                            >CF-templates/Arch-docs.md</a
-                        >. This document provides an in-depth overview of the
-                        AWS architecture, design decisions, and implementation
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            CF-templates/Arch-docs.md
+                        </a>
+
+                        <br />
+                        <br />
+
+                        This document provides an in-depth overview of the AWS
+                        architecture, design decisions, and implementation
                         details of the SoitinStock project.
                     </p>
+                </div>
+            </div>
 
-                    <h3 class="project-gallery-title">Project Gallery</h3>
-                    <div class="project-gallery">
-                        <p><b>Website images:</b></p>
-                        <img
-                            src="/project-screenshots/SSlogin.png"
-                            alt="soitinstock user screenshot"
-                        />
-                        <img
-                            src="/project-screenshots/SShellouser.png"
-                            alt="soitinstock user screenshot"
-                        />
-                        <img
-                            src="/project-screenshots/SSmainpage.png"
-                            alt="soitinstock user interface screenshot"
-                        />
-                        <img
-                            src="/project-screenshots/SSmodal.png"
-                            alt="soitinstock modal screenshot"
-                        />
-                        <img
-                            src="/project-screenshots/SSrentalitems.png"
-                            alt="soitinstock rental items screenshot"
-                        />
-                        <p><b>Initial Figma Designs by Oskari Puranen:</b></p>
-                        <img
-                            src="/project-screenshots/SSfigmat.png"
-                            alt="soitinstock figma screenshot"
-                        />
-                        <p><b>Color Palette:</b></p>
-                        <img
-                            src="/project-screenshots/SSvärimaalima.png"
-                            alt="soitinstock colors screenshot"
-                        />
-                        <p><b>Database Diagrams by Minttu Räisänen:</b></p>
-                        <img
-                            src="/project-screenshots/SStietokanta.png"
-                            alt="soitinstock database ER screenshot"
-                        />
-                        <img
-                            src="/project-screenshots/SSeermalli.png"
-                            alt="soitinstock database EER screenshot"
-                        />
-                    </div>
+            <!-- FULL WIDTH GALLERY -->
+
+            <h3 class="project-gallery-title">Project Gallery</h3>
+
+            <div class="gallery-section">
+                <h4>Website Images:</h4>
+
+                <div class="project-gallery">
+                    <img
+                        src="/project-screenshots/soitinstock/SShellouser.png"
+                        alt="soitinstock user screenshot"
+                    />
+                </div>
+                <br />
+                <div class="project-gallery">
+                    <img
+                        src="/project-screenshots/soitinstock/SSlogin.png"
+                        alt="soitinstock login screenshot"
+                    />
+
+                    <img
+                        src="/project-screenshots/soitinstock/SSrentalitems.png"
+                        alt="soitinstock rental items screenshot"
+                    />
+                </div>
+
+                <br />
+
+                <div class="project-gallery">
+                    <img
+                        src="/project-screenshots/soitinstock/SSmainpage.png"
+                        alt="soitinstock user interface screenshot"
+                    />
+
+                    <img
+                        src="/project-screenshots/soitinstock/SSmodal.png"
+                        alt="soitinstock modal screenshot"
+                    />
+                </div>
+
+                <br />
+            </div>
+
+            <div class="gallery-section">
+                <h4>Figma Designs by Oskari Puranen:</h4>
+
+                <div class="project-gallery">
+                    <img
+                        src="/project-screenshots/soitinstock/SSfigmat.png"
+                        alt="soitinstock figma screenshot"
+                        class="large-image"
+                    />
+                    <img
+                        src="/project-screenshots/soitinstock/SSvärimaalima.png"
+                        alt="soitinstock colors screenshot"
+                    />
+                </div>
+            </div>
+
+            <div class="gallery-section">
+                <h4>Database Diagrams by Minttu Räisänen:</h4>
+
+                <div class="project-gallery">
+                    <img
+                        src="/project-screenshots/soitinstock/SStietokanta.png"
+                        alt="soitinstock database ER screenshot"
+                    />
+
+                    <img
+                        src="/project-screenshots/soitinstock/SSeermalli.png"
+                        alt="soitinstock database EER screenshot"
+                    />
                 </div>
             </div>
         </div>
