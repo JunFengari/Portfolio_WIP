@@ -166,3 +166,28 @@ nav li a:hover {
 
     overflow-y: auto;
 }
+
+/*-----------------------------------------FOOTER----------------------------------------------------*/
+/* footer styles with the same gradient as in nav, alignment, and text styles */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+
+    /* padding-top: 1rem;
+    padding-bottom: 1rem; */
+
+    background-color: #c0c0c0;
+    background-size: cover;
+    background-position: center;
+
+    border-bottom: 2px solid #808080;
+    border-top: 2px solid #ffffff;
+}
+
+footer > p {
+    text-align: center;
+}
+
+/*--------------------------------------------------------------------------------------------------*/
