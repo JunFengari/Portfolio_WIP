@@ -103,6 +103,19 @@ nav li a:hover {
     background-color: #868583;
 }
 
+nav li a:active {
+    border-top: 2px solid #808080;
+    border-left: 2px solid #808080;
+    border-right: 2px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
+
+    box-shadow:
+        inset 1px 1px 0 #404040,
+        inset -1px -1px 0 #dfdfdf;
+
+    transform: translateY(2px);
+}
+
 .btnactive {
     color: black;
     background-color: #868583;
@@ -186,13 +199,21 @@ p {
 .projectset > h3 {
     color: black;
     font-family: 'MS Sans Serif', Tahoma, sans-serif;
-    margin-top: 0.5rem;
+    margin-top: 0.2rem;
+    margin-bottom: 0.1rem;
 }
 
 .projectset > img {
     width: 100%;
     height: auto;
     margin-bottom: 0.5rem;
+}
+
+.card-date {
+    font-size: 0.9rem;
+    font-family: 'MS Sans Serif', Tahoma, sans-serif;
+    color: #7c7c7c;
+    margin-top: 0;
 }
 
 /*---------------------------------------INDIVIDUAL PROJECT PAGE STYLES-------------------------------------*/
@@ -290,6 +311,19 @@ ul {
 .project-links > a:hover {
     cursor: pointer;
     background-color: #868583;
+}
+
+.project-links > a:active {
+    border-top: 2px solid #808080;
+    border-left: 2px solid #808080;
+    border-right: 2px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
+
+    box-shadow:
+        inset 1px 1px 0 #404040,
+        inset -1px -1px 0 #dfdfdf;
+
+    transform: translateY(2px);
 }
 
 .project-title {
@@ -424,6 +458,84 @@ ul {
     background-color: #868583;
 
     transform: translateY(-50%) translateY(1px);
+}
+
+/*---------------------------------------Report project styles-------------------------------------*/
+
+.pdf-window {
+    margin-top: 10px;
+    margin-bottom: 0.5rem;
+
+    padding: 12px;
+
+    background-color: #c0c0c0;
+
+    border-top: 2px solid #808080;
+    border-left: 2px solid #808080;
+    border-right: 2px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
+
+    box-shadow:
+        inset 1px 1px 0 #404040,
+        inset -1px -1px 0 #dfdfdf;
+}
+
+details summary {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: fit-content;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+
+    padding: 10px 15px;
+
+    font-size: clamp(7px, 2vw, 20px);
+    font-family: 'MS Sans Serif', Tahoma, sans-serif;
+
+    color: black;
+    background-color: #c0c0c0;
+
+    border-top: 2px solid #ffffff;
+    border-left: 2px solid #ffffff;
+    border-right: 2px solid #808080;
+    border-bottom: 2px solid #808080;
+
+    box-shadow:
+        inset 1px 1px 0 #dfdfdf,
+        inset -1px -1px 0 #404040;
+
+    cursor: pointer;
+
+    list-style: none;
+
+    transition:
+        background-color 0.15s ease,
+        transform 0.1s ease;
+}
+
+details summary:hover {
+    background-color: #868583;
+}
+
+details summary:active {
+    transform: translateY(2px);
+}
+
+details[open] summary {
+    border-top: 2px solid #808080;
+    border-left: 2px solid #808080;
+    border-right: 2px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
+
+    box-shadow:
+        inset 1px 1px 0 #404040,
+        inset -1px -1px 0 #dfdfdf;
+
+    transform: translateY(2px);
+
+    background-color: #868583;
 }
 
 /*----------------------------------------------------------------------------------------------------*/
